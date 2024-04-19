@@ -120,3 +120,14 @@ tbody tr:hover {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+/* App.css */
+/* Styling for links */
+a {
+  color: #007bff; /* Blue color for links */
+  text-decoration: none; /* Remove default underline */
+}
+
+a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}

@@ -1,3 +1,35 @@
+/* RepoDetailPage.css
+.repo-detail-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.repo-detail-heading {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.repo-detail-content {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.repo-detail-content p {
+  margin-bottom: 10px;
+}
+
+.repo-detail-content a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.repo-detail-content a:hover {
+  text-decoration: underline;
+} */
+
 /* RepoDetailPage.css */
 .repo-detail-container {
   max-width: 600px;
@@ -28,4 +60,21 @@
 
 .repo-detail-content a:hover {
   text-decoration: underline;
+}
+
+/* Styling for the Reload App link */
+.reload-link {
+  display: block; /* Make it a block-level element */
+  margin-top: 20px; /* Add some space above the link */
+  color: #007bff; /* Blue color for links */
+  text-decoration: none; /* Remove default underline */
+}
+
+.reload-link:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
+.reload-link::before {
+  content: "\21BB"; /* Unicode character for refresh symbol */
+  margin-right: 5px; /* Add some space between symbol and text */
 }

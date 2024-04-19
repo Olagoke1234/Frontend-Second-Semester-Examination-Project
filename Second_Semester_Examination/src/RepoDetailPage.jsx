@@ -54,6 +54,10 @@ const RepoDetailPage = () => {
       ) : (
         <p>Loading repository details...</p>
       )}
+      {/* Anchor tag to reload the App component */}
+      <a href="/" className="reload-link">
+        Reload Main Page
+      </a>
     </div>
   );
 };

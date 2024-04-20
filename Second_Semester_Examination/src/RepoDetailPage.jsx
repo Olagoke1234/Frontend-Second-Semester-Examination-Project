@@ -34,9 +34,6 @@ const RepoDetailPage = () => {
             <strong>Repository Name:</strong> {repoDetails.name}
           </p>
           <p>
-            <strong>Description:</strong> {repoDetails.description}
-          </p>
-          <p>
             <strong>URL:</strong>{" "}
             <a
               href={repoDetails.html_url}
@@ -47,8 +44,10 @@ const RepoDetailPage = () => {
             </a>
           </p>
           <p>
-            <strong>Stars:</strong> {repoDetails.stargazers_count}
+            <strong>Has Live Hosting:</strong>{" "}
+            {repoDetails.has_pages.toString()}
           </p>
+
           {/* Add more details as needed */}
         </div>
       ) : (

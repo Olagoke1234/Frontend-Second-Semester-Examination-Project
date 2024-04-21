@@ -23,14 +23,30 @@ function App() {
   useEffect(() => {
     const fetchRepoData = async () => {
       try {
-        const response = await fetch(
-          "https://api.github.com/users/Olagoke1234/repos"
-        );
-        if (!response.ok) {
-          throw new Error("Failed to fetch repositories");
+        const perPage = 100; // Set the number of repositories per page
+        let page = 1;
+        let allRepos = [];
+
+        while (true) {
+          const response = await fetch(
+            `https://api.github.com/users/Olagoke1234/repos?page=${page}&per_page=${perPage}`
+          );
+
+          if (!response.ok) {
+            throw new Error("Failed to fetch repositories");
+          }
+
+          const data = await response.json();
+          if (data.length === 0) {
+            // No more repositories available
+            break;
+          }
+
+          allRepos = [...allRepos, ...data];
+          page++;
         }
-        const data = await response.json();
-        setRepoData(data);
+
+        setRepoData(allRepos);
       } catch (error) {
         console.error("Error fetching repositories:", error.message);
       }
